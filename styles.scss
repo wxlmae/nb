@@ -1,0 +1,192 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+body{
+    position: relative;
+    background: #b4b4e2;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.container{
+    position: relative;
+   
+    padding: 50px;
+   
+    .card{  
+      background: #E1C9A9;
+      width: 320px;
+      height: 450px;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      &::before{
+        content: "";
+        position:absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #ffffff;
+        clip-path: circle(150px at 80% 0%);
+        transition: 0.5s ease-in-out;
+      }
+      &:hover{
+        .imgBx{
+            top: 0;
+            transform: translateY(0);
+           
+        }
+        .contentBx{
+            height: 210px;
+            .size{
+                opacity: 1;
+                visibility: visible;
+                transition-delay: 0.5s;
+            }
+            .color{
+                opacity: 1;
+                visibility: visible;
+                transition-delay: 0.6s;
+            }
+            a{
+                opacity: 1;
+                transform: translateY(0px);
+                transition-delay: 0.75s;
+            }
+        }
+      }
+      &:hover::before{
+        clip-path: circle(300px at 80% -20%);
+        clip-path: circle(300px at 80% -20%);
+       
+    }
+    &::after{
+        content:"Jordan";
+        position: absolute;
+        top: 30%;
+        left: -20%;
+        font-size: 12em;
+        color: rgba(241, 237, 237, 0.02);
+        font-style: italic;
+        z-index: 1;
+    }
+      .imgBx{
+       
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        height: 220px;
+        z-index: 1000;
+        transition: 0.05s;
+        transform: translateY(-50%);
+        img{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 340px;
+           ;
+            transform: translate(-50%,-50%) rotate(-10deg);
+
+        }
+      }
+      .contentBx{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+       
+        height: 100px;
+        text-align: center;
+        transition: 1s ;
+        z-index: 10;
+        h2{
+            font-weight: 600;
+            letter-spacing: 1px;
+            color: #fff;
+        }
+        .size, .color{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 8px 20px;
+            opacity: 1;
+            transition: 0.5s;
+            opacity: 0;
+            visibility: hidden;
+            h3,h3{
+                color: #fff;
+                font-weight: 300;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                margin-right: 10px;
+            }
+        }
+        .size span{
+            width: 26px;
+            height: 26px;
+            text-align: center;
+            line-height: 24px;
+            font-size: 14px;
+            display: inline-block;
+            color: #111;
+            background: #fff;
+            border-radius: 4px;
+            margin: 0 5px;
+            transition: 0.5s;
+            cursor:pointer;
+            &:hover{
+                color:#111;
+                background: #e2b188;
+
+            }
+        }
+        .color span{
+            width: 20px;
+            height: 20px;
+            background:#f00;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            &:nth-child(2){
+                background: #000000;
+            }
+            &:nth-child(3){
+                background: #a37557;
+            }
+            &:nth-child(4){
+                background:#928989 ;
+               
+            }
+        }
+        a{
+            display: inline-block;
+            padding: 10px 30px;
+            background: #a8a572;
+            border-radius: px;
+            margin-top: 10px;
+            text-decoration: none;
+            font-weight: 600;
+            color: #f7f7f7;
+            transform: translateY(50px);
+            transition: 0.5s;
+            opacity: 0;
+            &:hover{
+                background: rgb(194, 191, 191);
+                transition: 0.5s ;
+                border-radius: 30px;
+            }
+        }
+      }
+     
+    }
+}
+
